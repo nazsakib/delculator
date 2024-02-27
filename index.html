@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Calculate Your Delivery Charge by Using Distance, Weight and Area"
+        />
+
+        <!-- style -->
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+        <title>Delculator</title>
+    </head>
+    <body class="bg-slate-900">
+        <header></header>
+        <main>
+            <div class="container mx-auto p-4">
+                <!-- delculator form -->
+                <div
+                    class="delculator-form border border-blue-400 p-4 bg-blue-950 rounded-md shadow-gray-700 shadow-md"
+                >
+                    <h1 class="text-white text-4xl py-4">Delculator</h1>
+                    <div class="p-8 bg-white rounded shadow-md">
+                        <form>
+                            <!-- First Row -->
+                            <div class="item-name">
+                                <div class="mb-4">
+                                    <label
+                                        for="itemName"
+                                        class="block text-gray-700"
+                                        >Item Name</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="itemName"
+                                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- promo code -->
+                            <div class="promo-code">
+                                <div class="mb-4">
+                                    <label
+                                        for="promoCode"
+                                        class="block text-gray-700"
+                                        >Promo Code if have any:</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="promoCode"
+                                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Second Row -->
+                            <div class="flex">
+                                <div class="mb-4 flex-1 gap-4">
+                                    <label
+                                        for="parcelCount"
+                                        class="block text-gray-700"
+                                        >How many parcels?</label
+                                    >
+                                    <input
+                                        type="number"
+                                        id="parcelCount"
+                                        name="parcelCount"
+                                        class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                                    />
+                                </div>
+                                <div class="mb-4 flex-1 px-2">
+                                    <label
+                                        for="parcelWeight"
+                                        class="block text-gray-700"
+                                        >Parcel Weight</label
+                                    >
+                                    <select
+                                        id="parcelWeight"
+                                        name="parcel weight"
+                                        class="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-indigo-500"
+                                    >
+                                        <option>Up to 5 kg</option>
+                                        <option>5-10 kg</option>
+                                        <option>After 10 kg</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Delivery Urgency -->
+                            <div class="mb-4">
+                                <label
+                                    for="deliveryUrgency"
+                                    class="block text-gray-700 py-2"
+                                    >Delivery Urgency</label
+                                >
+                                <select
+                                    id="deliveryUrgency"
+                                    name="delivery urgency"
+                                    class="h-full w-full border border-gray-300 rounded-md bg-transparent p-2 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm md:text-lg"
+                                >
+                                    <option>
+                                        Standard delivery (within 2-3 days)
+                                    </option>
+                                    <option>Next-day delivery</option>
+                                    <option>Same-day delivery</option>
+                                </select>
+                            </div>
+
+                            <!-- Delivey time -->
+                            <div class="mb-4">
+                                <label
+                                    for="deliveryTime"
+                                    class="block text-gray-700 py-2"
+                                    >Delivery Time</label
+                                >
+                                <select
+                                    id="deliveryTime"
+                                    name="delivery time"
+                                    class="h-full w-full border border-gray-300 rounded-md bg-transparent p-2 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm md:text-lg"
+                                >
+                                    <option>Standard Delivry</option>
+                                    <option>Weekend Delivery</option>
+                                </select>
+                            </div>
+
+                            <!-- Third Row -->
+                            <div class="mb-4">
+                                <label
+                                    for="deliveryArea"
+                                    class="block text-gray-700 py-2"
+                                    >Select Delivery area</label
+                                >
+                                <select
+                                    id="deliveryArea"
+                                    name="delivery area"
+                                    class="h-full w-full border border-gray-300 rounded-md bg-transparent p-2 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm md:text-lg"
+                                >
+                                    <option>Urban</option>
+                                    <option>Rural</option>
+                                    <option>Remote</option>
+                                </select>
+                                <!-- <input
+                                    type="text"
+                                    id="deliveryArea"
+                                    name="delivery area"
+                                    class="mt-1 p-2 block w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+                                /> -->
+                            </div>
+
+                            <!-- Fourth Row -->
+                            <div class="mb-4">
+                                <div class="mx-auto w-full bg-white rounded">
+                                    <label
+                                        for="message"
+                                        class="block text-gray-700 font-semibold mb-2"
+                                        >Message:</label
+                                    >
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows="4"
+                                        class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 resize-none"
+                                    ></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div>
+                                <button
+                                    type="submit"
+                                    class="w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container mx-auto p-4">
+                <!-- delculator conditions -->
+                <div
+                    class="p-4 bg-blue-950 rounded-md border border-blue-400 shadow-gray-700 shadow-md"
+                >
+                    <h1 class="text-white text-2xl py-4">
+                        Delivery Charge Conditions
+                    </h1>
+                    <div class="conditions-list">
+                        <ul>
+                            <li class="mb-2 bg-neutral-950 rounded-md p-4">
+                                <span class="font-semibold text-white"
+                                    >Distance-based charge:</span
+                                >
+                                <ul class="list-disc ml-4 text-gray-400 py-2">
+                                    <li>0-5 kilometers: 50 Tk</li>
+                                    <li>5-10 kilometers: 70 Tk</li>
+                                    <li>10-20 kilometers: 120 Tk</li>
+                                    <li>Beyond 20 kilometers: 200 Tk</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2 bg-neutral-950 rounded-md p-4">
+                                <span class="font-semibold text-white"
+                                    >Weight-based charge:</span
+                                >
+                                <ul class="list-disc ml-4 text-gray-400 py-2">
+                                    <li>Up to 5 kg: 50 Tk</li>
+                                    <li>5-10 kg: 70 Tk</li>
+                                    <li>After 10 kg: Per kg 10 Tk</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2 bg-neutral-950 rounded-md p-4">
+                                <span class="font-semibold text-white"
+                                    >Urgency or speed-based charge:</span
+                                >
+                                <ul class="list-disc ml-4 text-gray-400 py-2">
+                                    <li>
+                                        Standard delivery (within 2-3 days): 50
+                                        Tk
+                                    </li>
+                                    <li>Next-day delivery: 100 Tk</li>
+                                    <li>Same-day delivery: 150 Tk</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2 bg-neutral-950 rounded-md p-4">
+                                <span class="font-semibold text-white"
+                                    >Time-based charge:</span
+                                >
+                                <ul class="list-disc ml-4 text-gray-400 py-2">
+                                    <li>Standard weekday delivery: 60 Tk</li>
+                                    <li>Weekend delivery: 70 Tk</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2 bg-neutral-950 rounded-md p-4">
+                                <span class="font-semibold text-white"
+                                    >Area-based charge:</span
+                                >
+                                <ul class="list-disc ml-4 text-gray-400 py-2">
+                                    <li>Urban area: 60 Tk</li>
+                                    <li>Rural area: 120 Tk</li>
+                                    <li>Remote area: 200 Tk</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="border-t-4 border-indigo-500 shadow dark:bg-gray-900">
+            <div class="mx-auto p-2">
+                <div class="sm:flex sm:items-center sm:justify-between px-4">
+                    <a
+                        href="https://sakibsnaz.vercel.app/"
+                        class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+                    >
+                        <span
+                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                            >sakibsNaz/></span
+                        >
+                    </a>
+                    <ul
+                        class="flex flex-wrap items-center text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+                    >
+                        <li>
+                            <a
+                                href="github.com/nazsakib"
+                                class="hover:underline me-4 md:me-6"
+                                >Github</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="linkedin.com/in/sakibsnaz"
+                                class="hover:underline me-4 md:me-6"
+                                >Linkedin</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <hr
+                    class="border-gray-200 sm:mx-auto dark:border-gray-700 my-2"
+                />
+                <span
+                    class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+                    >© 2024
+                    <a
+                        href="https://sakibsnaz.vercel.app/"
+                        class="hover:underline"
+                        >Sakib MD Nazmush</a
+                    >. All Rights Reserved.</span
+                >
+            </div>
+        </footer>
+    </body>
+</html>
